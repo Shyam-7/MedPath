@@ -1,0 +1,81 @@
+/* MedPath — Minimal global styles (most styling via Ant Design tokens) */
+:root {
+  --mp-primary: #1B5E3B;
+  --mp-accent: #1A3A5C;
+  --mp-gold: #F5A623;
+  --mp-bg-light: #F7FAF8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Ant Design layout overrides */
+.ant-layout { background: #fff !important; }
+.ant-layout-header { background: #fff !important; }
+
+/* Section spacing utility */
+.section { padding: 80px 0; }
+.section-alt { padding: 80px 0; background: var(--mp-bg-light); }
+.section-dark { padding: 80px 0; background: var(--mp-accent); }
+
+/* Hero gradient overlay */
+.hero-bg {
+  background: linear-gradient(135deg, #f0f7f3 0%, #e8f4f0 50%, #dce9e3 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stats bar */
+.stats-bar {
+  background: linear-gradient(135deg, var(--mp-primary) 0%, #2E7D52 100%);
+  padding: 40px 0;
+}
+
+/* Feature card hover */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(27, 94, 59, 0.15);
+}
+
+/* Testimonial card */
+.testimonial-card {
+  margin: 0 12px;
+}
+
+/* CTA banner gradient */
+.cta-banner {
+  background: linear-gradient(135deg, var(--mp-primary) 0%, #2E7D52 60%, #3a9d6a 100%);
+  padding: 60px 0;
+}
+
+/* Footer */
+.footer-main {
+  background: #0A1628;
+  padding: 60px 0 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section, .section-alt, .section-dark { padding: 48px 0; }
+  .hero-bg { padding: 40px 0; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--mp-primary); border-radius: 4px; }
+
+/* Collapse/FAQ custom */
+.faq-collapse .ant-collapse-header { font-weight: 600 !important; font-size: 15px !important; }
