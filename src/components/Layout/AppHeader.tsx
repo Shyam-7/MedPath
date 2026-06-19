@@ -26,14 +26,14 @@ const AppHeader: React.FC = () => (
         selectedKeys={['home']}
       />
       <Space size="small">
-        <Button icon={<PhoneOutlined />} type="default" shape="round" href="tel:+919876543210">
+        <Button icon={<PhoneOutlined />} type="default" shape="round" href="tel:+917339448332">
           Call Now
         </Button>
         <Button
           icon={<WhatsAppOutlined />}
           style={{ background: '#25D366', borderColor: '#25D366', color: '#fff' }}
           shape="round"
-          href="https://wa.me/919876543210"
+          href="https://wa.me/917339448332"
           target="_blank"
         >
           Chat on WhatsApp

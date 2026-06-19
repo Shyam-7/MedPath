@@ -80,7 +80,10 @@ const AppFooter: React.FC = () => (
           <Flex vertical gap={12}>
             <Flex align="center" gap={10}>
               <CONTACT_INFO.phoneIcon style={{ color: '#1B5E3B', fontSize: 16 }} />
-              <Text style={{ color: '#94A3B8', fontSize: 14 }}>{CONTACT_INFO.phone}</Text>
+              <Flex vertical gap={0}>
+                <Text style={{ color: '#94A3B8', fontSize: 14 }}>{CONTACT_INFO.phone1}</Text>
+                <Text style={{ color: '#94A3B8', fontSize: 14 }}>{CONTACT_INFO.phone2}</Text>
+              </Flex>
             </Flex>
             <Flex align="center" gap={10}>
               <CONTACT_INFO.emailIcon style={{ color: '#1B5E3B', fontSize: 16 }} />
