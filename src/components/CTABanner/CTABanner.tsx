@@ -1,4 +1,4 @@
-import { Row, Col, Typography, Button, Flex, Space } from 'antd';
+import { Row, Col, Typography, Button, Flex } from 'antd';
 import { ArrowRightOutlined, WhatsAppOutlined, CheckCircleFilled } from '@ant-design/icons';
 
 const { Title, Text } = Typography;
