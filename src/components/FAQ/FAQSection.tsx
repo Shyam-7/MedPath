@@ -7,7 +7,7 @@ const { Paragraph } = Typography;
 
 const FAQSection: React.FC = () => (
   <section className="section" id="faq">
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 48px' }}>
+    <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 48px' }} className="max-md:!px-6">
       <SectionTitle subtitle="FREQUENTLY ASKED QUESTIONS" title="Got Questions? We've Got Answers" />
       <Collapse
         accordion

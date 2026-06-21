@@ -6,13 +6,13 @@ const { Title, Paragraph, Text } = Typography;
 
 const SignatureProgram: React.FC = () => (
   <section className="section-alt" id="program">
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+    <div className="container-main">
       <Row gutter={[48, 32]} align="middle">
         <Col xs={24} lg={12}>
           <Text strong style={{ color: '#1B5E3B', fontSize: 13, letterSpacing: 2, textTransform: 'uppercase' }}>
             OUR PROGRAM
           </Text>
-          <Title level={2} style={{ margin: '8px 0 16px' }}>
+          <Title level={2} style={{ marginTop: 8, marginBottom: 16 }}>
             MedPath <span style={{ color: '#1B5E3B' }}>Signature Guidance</span>
           </Title>
           <Paragraph type="secondary" style={{ fontSize: 15, maxWidth: 420 }}>
@@ -41,9 +41,8 @@ const SignatureProgram: React.FC = () => (
             <Flex
               align="center"
               justify="center"
+              className="w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
               style={{
-                width: 120,
-                height: 120,
                 borderRadius: '50%',
                 background: 'linear-gradient(135deg, #e8f5ec 0%, #d0ead8 100%)',
                 fontSize: 48,

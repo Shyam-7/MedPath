@@ -6,7 +6,7 @@ const { Text } = Typography;
 
 const ServicesSection: React.FC = () => (
   <section className="section" id="services">
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+    <div className="container-main">
       <SectionTitle subtitle="OUR SERVICES" title="Complete Support for NEET Aspirants" />
       <Row gutter={[24, 24]} justify="center">
         {SERVICES.map((s) => (

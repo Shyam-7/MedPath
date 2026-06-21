@@ -15,7 +15,7 @@ const socialIcons = [FacebookOutlined, InstagramOutlined, YoutubeOutlined, Linke
 
 const AppFooter: React.FC = () => (
   <footer className="footer-main">
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+    <div className="container-main">
       <Row gutter={[48, 40]}>
         {/* Brand column */}
         <Col xs={24} sm={12} lg={7}>
@@ -117,7 +117,7 @@ const AppFooter: React.FC = () => (
         </Text>
         <Space separator={<Text style={{ color: '#475569' }}>|</Text>}>
           <Link style={{ color: '#64748B', fontSize: 13 }}>Privacy Policy</Link>
-          <Link style={{ color: '#64748B', fontSize: 13 }}>Terms & Conditions</Link>
+          <Link style={{ color: '#64748B', fontSize: 13 }}>Terms &amp; Conditions</Link>
         </Space>
       </Flex>
     </div>

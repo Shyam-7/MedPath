@@ -5,7 +5,7 @@ const { Title, Text } = Typography;
 
 const StatsBar: React.FC = () => (
   <div className="stats-bar">
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+    <div className="container-main">
       <Row gutter={[32, 24]} justify="space-around">
         {STATS.map((s) => (
           <Col key={s.label} xs={12} sm={6}>
@@ -13,15 +13,16 @@ const StatsBar: React.FC = () => (
               <Flex
                 align="center"
                 justify="center"
-                style={{ width: 52, height: 52, borderRadius: 12, background: 'rgba(255,255,255,0.15)' }}
+                className="w-10 h-10 md:w-[52px] md:h-[52px]"
+                style={{ borderRadius: 12, background: 'rgba(255,255,255,0.15)' }}
               >
-                <s.icon style={{ fontSize: 24, color: '#fff' }} />
+                <s.icon className="text-xl md:text-2xl" style={{ color: '#fff' }} />
               </Flex>
               <Flex vertical>
-                <Title level={3} style={{ color: '#fff', margin: 0, fontSize: 28, fontWeight: 800 }}>
+                <Title level={3} className="md:!text-[28px]" style={{ color: '#fff', margin: 0, fontWeight: 800 }}>
                   {s.value}
                 </Title>
-                <Text style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13 }}>{s.label}</Text>
+                <Text className="text-[12px] md:text-[13px]" style={{ color: 'rgba(255,255,255,0.8)' }}>{s.label}</Text>
               </Flex>
             </Flex>
           </Col>

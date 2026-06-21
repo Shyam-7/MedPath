@@ -7,8 +7,8 @@ const { Text, Paragraph } = Typography;
 
 const TestimonialsSection: React.FC = () => (
   <section className="section-alt" id="testimonials">
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
-      <SectionTitle subtitle="SUCCESS STORIES" title="What Parents & Students Say" />
+    <div className="container-main">
+      <SectionTitle subtitle="SUCCESS STORIES" title="What Parents &amp; Students Say" />
       <Carousel
         autoplay
         dots

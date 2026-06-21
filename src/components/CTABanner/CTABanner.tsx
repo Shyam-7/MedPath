@@ -7,7 +7,7 @@ const ctaFeatures = ['One-to-one guidance', 'Personalized strategy', '100% Confi
 
 const CTABanner: React.FC = () => (
   <section className="cta-banner">
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+    <div className="container-main">
       <Row gutter={[48, 24]} align="middle">
         <Col xs={24} lg={16}>
           <Text style={{ color: 'rgba(255,255,255,0.8)', fontSize: 14 }}>
@@ -24,7 +24,7 @@ const CTABanner: React.FC = () => (
               </Flex>
             ))}
           </Flex>
-          <Space size="middle" style={{ marginTop: 24 }}>
+          <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3" style={{ marginTop: '24px' }}>
             <Button
               type="default"
               size="large"
@@ -35,7 +35,7 @@ const CTABanner: React.FC = () => (
             >
               Book Free Counseling
             </Button>
-            <Text style={{ color: 'rgba(255,255,255,0.7)' }}>or</Text>
+            <Text className="hidden sm:inline" style={{ color: 'rgba(255,255,255,0.7)' }}>or</Text>
             <Button
               size="large"
               shape="round"
@@ -44,7 +44,7 @@ const CTABanner: React.FC = () => (
             >
               Chat on WhatsApp
             </Button>
-          </Space>
+          </div>
         </Col>
         <Col xs={0} lg={8}>
           <Flex justify="flex-end">

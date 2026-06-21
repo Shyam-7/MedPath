@@ -7,24 +7,24 @@ const { Title, Text, Paragraph } = Typography;
 const HeroSection: React.FC = () => (
   <>
     <div className="hero-bg" style={{ padding: '64px 0 48px' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
+      <div className="container-main">
         <Row gutter={[48, 32]} align="middle">
           {/* Left content */}
           <Col xs={24} lg={13}>
             <Text strong style={{ color: '#1B5E3B', fontSize: 13, letterSpacing: 2, textTransform: 'uppercase' }}>
-              NEET UG COUNSELING & ADMISSION GUIDANCE
+              NEET UG COUNSELING &amp; ADMISSION GUIDANCE
             </Text>
-            <Title style={{ fontSize: 48, lineHeight: 1.15, margin: '16px 0' }}>
+            <Title className="!text-3xl md:!text-[48px] !leading-tight !my-4">
               Your Path to{' '}
-              <br />
+              <br className="hidden md:block" />
               a <span style={{ color: '#1B5E3B' }}>Medical Future</span>
             </Title>
-            <Paragraph style={{ fontSize: 17, color: '#6B7280', maxWidth: 480, marginBottom: 12 }}>
+            <Paragraph className="text-[15px] md:text-[17px]" style={{ color: '#6B7280', maxWidth: 480, marginBottom: 12 }}>
               Expert guidance for NEET aspirants and parents to choose the right college and secure your dream medical seat.
             </Paragraph>
 
             {/* Mini feature row */}
-            <Flex gap={24} wrap="wrap" style={{ margin: '24px 0 32px' }}>
+            <Flex gap={24} wrap="wrap" className="my-4 md:my-6 md:mb-8">
               {HERO_FEATURES.map((f) => (
                 <Flex key={f.title} align="center" gap={8}>
                   <f.icon style={{ fontSize: 18, color: '#1B5E3B' }} />
@@ -32,15 +32,17 @@ const HeroSection: React.FC = () => (
                 </Flex>
               ))}
             </Flex>
-
-            <Space size="middle">
-              <Button type="primary" size="large" shape="round" icon={<ArrowRightOutlined />} iconPlacement="end">
-                Book a Free Counseling Session
-              </Button>
-              <Button size="large" shape="round" icon={<PlayCircleOutlined />}>
-                Know More
-              </Button>
-            </Space>
+            
+            <div style={{ marginTop: '20px' }}>
+              <Space size="middle" className="flex flex-wrap">
+                <Button type="primary" size="large" shape="round" icon={<ArrowRightOutlined />} iconPlacement="end">
+                  Book a Free Counseling Session
+                </Button>
+                <Button size="large" shape="round" icon={<PlayCircleOutlined />}>
+                  Know More
+                </Button>
+              </Space>
+            </div>
           </Col>
 
           {/* Right — Guide card */}
@@ -48,28 +50,19 @@ const HeroSection: React.FC = () => (
             <Flex justify="center" style={{ position: 'relative' }}>
               {/* Placeholder hero image (gradient circle) */}
               <div
+                className="w-[240px] h-[280px] md:w-[340px] md:h-[380px] flex items-center justify-center text-6xl md:text-8xl"
                 style={{
-                  width: 340,
-                  height: 380,
                   borderRadius: '50% 50% 50% 50% / 45% 45% 55% 55%',
                   background: 'linear-gradient(180deg, #d4e8dc 0%, #b8d8c4 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: 80,
                 }}
               >
                 🩺
               </div>
               {/* Floating guide card */}
               <Card
+                className="absolute top-4 w-[200px] md:w-[240px] rounded-2xl shadow-xl"
                 style={{
-                  position: 'absolute',
                   right: -20,
-                  top: 16,
-                  width: 240,
-                  borderRadius: 16,
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
                 }}
                 styles={{ body: { padding: 20 } }}
               >

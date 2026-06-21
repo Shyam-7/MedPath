@@ -7,8 +7,8 @@ const { Text, Paragraph } = Typography;
 
 const CollegesSection: React.FC = () => (
   <section className="section" id="colleges">
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px' }}>
-      <SectionTitle subtitle="COLLEGES WE COVER" title="Government, Private & Deemed Universities Across India" />
+    <div className="container-main">
+      <SectionTitle subtitle="COLLEGES WE COVER" title="Government, Private &amp; Deemed Universities Across India" />
       <Row gutter={[24, 24]} justify="center" align="stretch">
         {COLLEGES.map((c) => (
           <Col key={c.title} xs={12} sm={8} md={4}>
