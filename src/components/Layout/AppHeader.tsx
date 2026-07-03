@@ -2,18 +2,27 @@ import { Layout, Menu, Button, Flex, Space, Drawer } from 'antd';
 import { PhoneOutlined, WhatsAppOutlined, CalendarOutlined, MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import MedPathLogo from '../common/MedPathLogo';
 import { NAV_ITEMS } from '../../data/siteData';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 const AppHeader: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const handleNavClick = useCallback((info: { key: string }) => {
+    setDrawerOpen(false);
+    if (info.key === 'contact') {
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, []);
+
   return (
     <Layout.Header
+      className="!px-4 md:!px-12"
       style={{
         position: 'sticky',
         top: 0,
         zIndex: 100,
-        padding: '0 48px',
         borderBottom: '1px solid #f0f0f0',
         boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
         height: 72,
@@ -31,25 +40,32 @@ const AppHeader: React.FC = () => {
             items={NAV_ITEMS}
             style={{ flex: 1, justifyContent: 'center', border: 'none', fontSize: 14 }}
             selectedKeys={['home']}
+            onClick={handleNavClick}
           />
         </div>
 
         {/* Desktop CTA buttons */}
         <div className="hidden xl:flex" style={{ alignItems: 'center', flexShrink: 0 }}>
           <Space size="small">
-            <Button icon={<PhoneOutlined />} type="default" shape="round" href="tel:+917339448332">
+            <Button icon={<PhoneOutlined />} type="default" shape="round" href="tel:+919043003083">
               Call Now
             </Button>
             <Button
               icon={<WhatsAppOutlined />}
               style={{ background: '#25D366', borderColor: '#25D366', color: '#fff' }}
               shape="round"
-              href="https://wa.me/917339448332"
+              href="https://wa.me/919043003083"
               target="_blank"
             >
               Chat on WhatsApp
             </Button>
-            <Button type="primary" shape="round" icon={<CalendarOutlined />}>
+            <Button 
+              type="primary" 
+              shape="round" 
+              icon={<CalendarOutlined />}
+              href="https://wa.me/919043003083"
+              target="_blank"
+            >
               Book Free Counseling
             </Button>
           </Space>
@@ -80,10 +96,10 @@ const AppHeader: React.FC = () => {
           items={NAV_ITEMS}
           selectedKeys={['home']}
           style={{ borderInlineEnd: 'none', marginBottom: 24 }}
-          onClick={() => setDrawerOpen(false)}
+          onClick={handleNavClick}
         />
         <Flex vertical gap={12} style={{ padding: '0 24px' }}>
-          <Button icon={<PhoneOutlined />} type="default" shape="round" block href="tel:+917339448332">
+          <Button icon={<PhoneOutlined />} type="default" shape="round" block href="tel:+919043003083">
             Call Now
           </Button>
           <Button
@@ -91,12 +107,18 @@ const AppHeader: React.FC = () => {
             style={{ background: '#25D366', borderColor: '#25D366', color: '#fff' }}
             shape="round"
             block
-            href="https://wa.me/917339448332"
+            href="https://wa.me/919043003083"
             target="_blank"
           >
             Chat on WhatsApp
           </Button>
-          <Button type="primary" shape="round" icon={<CalendarOutlined />} block>
+          <Button 
+            type="primary" 
+            shape="round" 
+            icon={<CalendarOutlined />} block
+            href="https://wa.me/919043003083"
+            target="_blank"
+          >
             Book Free Counseling
           </Button>
         </Flex>

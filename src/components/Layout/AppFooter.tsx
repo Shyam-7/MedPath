@@ -14,7 +14,7 @@ const { Text, Link, Paragraph } = Typography;
 const socialIcons = [FacebookOutlined, InstagramOutlined, YoutubeOutlined, LinkedinOutlined];
 
 const AppFooter: React.FC = () => (
-  <footer className="footer-main">
+  <footer className="footer-main" id="contact">
     <div className="container-main">
       <Row gutter={[48, 40]}>
         {/* Brand column */}
@@ -51,7 +51,19 @@ const AppFooter: React.FC = () => (
           </Text>
           <Flex vertical gap={12}>
             {FOOTER_QUICK_LINKS.map((l) => (
-              <Link key={l.label} href={l.href} style={{ color: '#94A3B8', fontSize: 14 }}>
+              <Link 
+                key={l.label} 
+                style={{ color: '#94A3B8', fontSize: 14, cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const id = l.href.replace('#', '');
+                  if (id) {
+                    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+              >
                 {l.label}
               </Link>
             ))}
@@ -82,7 +94,6 @@ const AppFooter: React.FC = () => (
               <CONTACT_INFO.phoneIcon style={{ color: '#1B5E3B', fontSize: 16 }} />
               <Flex vertical gap={0}>
                 <Text style={{ color: '#94A3B8', fontSize: 14 }}>{CONTACT_INFO.phone1}</Text>
-                <Text style={{ color: '#94A3B8', fontSize: 14 }}>{CONTACT_INFO.phone2}</Text>
               </Flex>
             </Flex>
             <Flex align="center" gap={10}>
@@ -99,13 +110,15 @@ const AppFooter: React.FC = () => (
           </Text>
           <Text style={{ color: '#94A3B8', fontSize: 13, display: 'block' }}>{CONTACT_INFO.workingHours.weekday}</Text>
           <Text style={{ color: '#94A3B8', fontSize: 13, display: 'block' }}>{CONTACT_INFO.workingHours.weekend}</Text>
-          <Button
+          {/* <Button
             icon={<WhatsAppOutlined />}
             style={{ background: '#25D366', borderColor: '#25D366', color: '#fff', marginTop: 16 }}
             shape="round"
+            href="https://wa.me/919043003083"
+            target="_blank"
           >
             Chat on WhatsApp
-          </Button>
+          </Button> */}
         </Col>
       </Row>
 

@@ -32,6 +32,8 @@ const CTABanner: React.FC = () => (
               icon={<ArrowRightOutlined />}
               iconPlacement="end"
               style={{ background: '#fff', color: '#1B5E3B', fontWeight: 600, borderColor: '#fff' }}
+              href="https://wa.me/919043003083"
+              target="_blank"
             >
               Book Free Counseling
             </Button>
@@ -41,6 +43,8 @@ const CTABanner: React.FC = () => (
               shape="round"
               icon={<WhatsAppOutlined />}
               style={{ background: 'transparent', color: '#fff', borderColor: '#fff' }}
+              href="https://wa.me/919043003083"
+              target="_blank"
             >
               Chat on WhatsApp
             </Button>

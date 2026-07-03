@@ -11,7 +11,7 @@ const CollegesSection: React.FC = () => (
       <SectionTitle subtitle="COLLEGES WE COVER" title="Government, Private &amp; Deemed Universities Across India" />
       <Row gutter={[24, 24]} justify="center" align="stretch">
         {COLLEGES.map((c) => (
-          <Col key={c.title} xs={12} sm={8} md={4}>
+          <Col key={c.title} xs={24} sm={12} md={8} lg={4}>
             <Card
               hoverable
               className="feature-card"
@@ -32,7 +32,7 @@ const CollegesSection: React.FC = () => (
           </Col>
         ))}
         {/* Pan India highlight card */}
-        <Col xs={24} sm={12} md={4}>
+        <Col xs={24} sm={12} md={8} lg={4}>
           <Badge.Ribbon text="Pan India" color="#1B5E3B">
             <Card
               style={{

@@ -168,8 +168,7 @@ export const FOOTER_SERVICES = [
 ];
 
 export const CONTACT_INFO = {
-  phone1: '+91 98765 43210',
-  phone2: '+91 73394 48332',
+  phone1: '+91 90430 03083',
   email: 'info@medpath.in',
   address: 'Chennai, India',
   phoneIcon: PhoneOutlined,

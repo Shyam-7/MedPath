@@ -26,6 +26,7 @@ body {
 }
 
 html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
 
 /* ── Ant Design layout overrides ── */
 .ant-layout { background: #fff !important; }
@@ -87,10 +88,20 @@ html { scroll-behavior: smooth; }
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .section, .section-alt, .section-dark { padding: 48px 0; }
-  .hero-bg { padding: 40px 0; }
+  .hero-bg { padding: 40px 0 32px; }
   .cta-banner { padding: 40px 0; }
   .footer-main { padding: 40px 0 24px; }
-  .container-main { padding: 0 24px; }
+  .container-main { padding: 0 20px; }
+  .stats-bar { padding: 28px 0; }
+}
+
+@media (max-width: 480px) {
+  .section, .section-alt, .section-dark { padding: 36px 0; }
+  .hero-bg { padding: 28px 0 20px; }
+  .cta-banner { padding: 32px 0; }
+  .footer-main { padding: 32px 0 20px; }
+  .container-main { padding: 0 16px; }
+  .stats-bar { padding: 24px 0; }
 }
 
 /* ── Scrollbar ── */

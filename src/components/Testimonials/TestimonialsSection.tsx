@@ -11,11 +11,13 @@ const TestimonialsSection: React.FC = () => (
       <SectionTitle subtitle="SUCCESS STORIES" title="What Parents &amp; Students Say" />
       <Carousel
         autoplay
+        autoplaySpeed={4000}
         dots
         slidesToShow={3}
+        infinite
         responsive={[
-          { breakpoint: 992, settings: { slidesToShow: 2 } },
-          { breakpoint: 576, settings: { slidesToShow: 1 } },
+          { breakpoint: 992, settings: { slidesToShow: 2, infinite: true } },
+          { breakpoint: 576, settings: { slidesToShow: 1, centerMode: false, infinite: true } },
         ]}
       >
         {TESTIMONIALS.map((t, i) => (

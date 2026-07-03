@@ -35,7 +35,15 @@ const HeroSection: React.FC = () => (
             
             <div style={{ marginTop: '20px' }}>
               <Space size="middle" className="flex flex-wrap">
-                <Button type="primary" size="large" shape="round" icon={<ArrowRightOutlined />} iconPlacement="end">
+                <Button 
+                  type="primary" 
+                  size="large" 
+                  shape="round" 
+                  icon={<ArrowRightOutlined />} 
+                  iconPlacement="end"
+                  href="https://wa.me/919043003083"
+                  target="_blank"
+                  >
                   Book a Free Counseling Session
                 </Button>
                 <Button size="large" shape="round" icon={<PlayCircleOutlined />}>
@@ -50,7 +58,7 @@ const HeroSection: React.FC = () => (
             <Flex justify="center" style={{ position: 'relative' }}>
               {/* Placeholder hero image (gradient circle) */}
               <div
-                className="w-[240px] h-[280px] md:w-[340px] md:h-[380px] flex items-center justify-center text-6xl md:text-8xl"
+                className="w-[200px] h-[220px] sm:w-[240px] sm:h-[280px] md:w-[340px] md:h-[380px] flex items-center justify-center text-5xl sm:text-6xl md:text-8xl"
                 style={{
                   borderRadius: '50% 50% 50% 50% / 45% 45% 55% 55%',
                   background: 'linear-gradient(180deg, #d4e8dc 0%, #b8d8c4 100%)',
@@ -60,10 +68,7 @@ const HeroSection: React.FC = () => (
               </div>
               {/* Floating guide card */}
               <Card
-                className="absolute top-4 w-[200px] md:w-[240px] rounded-2xl shadow-xl"
-                style={{
-                  right: -20,
-                }}
+                className="absolute top-4 w-[180px] sm:w-[200px] md:w-[240px] rounded-2xl shadow-xl right-0 sm:-right-2 md:-right-5"
                 styles={{ body: { padding: 20 } }}
               >
                 <Title level={5} style={{ margin: '0 0 4px', fontSize: 14 }}>We Guide You</Title>
