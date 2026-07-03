@@ -1,10 +1,9 @@
-import { Row, Col, Typography, Flex, Space, Divider, Button } from 'antd';
+import { Row, Col, Typography, Flex, Space, Divider } from 'antd';
 import {
   FacebookOutlined,
   InstagramOutlined,
   YoutubeOutlined,
   LinkedinOutlined,
-  WhatsAppOutlined,
 } from '@ant-design/icons';
 import MedPathLogo from '../common/MedPathLogo';
 import { FOOTER_QUICK_LINKS, FOOTER_SERVICES, CONTACT_INFO } from '../../data/siteData';
